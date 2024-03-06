@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./player.css";
 import { useLocation } from "react-router-dom";
-import apiClient from "../../spotify";
-import SongCard from "../../components/songCard";
-import Queue from "../../components/queue";
-import AudioPLayer from "../../components/audioPlayer";
-import Widgets from "../../components/widgets";
+import apiClient from "../components/spotify";
+import SongCard from "../components/songCard/";
+import Queue from "../components/queue";
+import AudioPLayer from "../components/audioPlayer";
+import Widgets from "../components/widgets";
 
 export default function Player() {
   const location = useLocation();

@@ -21,7 +21,7 @@ export const loginEndpoint = `${authEndpoint}client_id=${clientId}&redirect_uri=
 )}&response_type=token&show_dialog=true`;
 
 export const login = () => {
-    window.location = loginEndpoint;
+    window.open(loginEndpoint, "_blank");
 };
 
 const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=1f42356ed83f46cc9ffd35c525fc8541&response_type=code&redirect_uri=http://localhost:3000/&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state`;
@@ -29,7 +29,7 @@ const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=1f42356ed83f4
 export default function Login() {
     return (
         <div className="login">
-            <a href={AUTH_URL}>Login With Spotify</a>
+            <a href={AUTH_URL} target="_self">Login With Spotify</a>
         </div>
     );
 }

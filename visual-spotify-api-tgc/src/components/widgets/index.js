@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./widgets.css";
-import apiClient from "../../spotify";
-import WidgetCard from "./widgetCard";
+import apiClient from "../spotify.js";
+import WidgetCard from "./widgetCard.js";
 
 export default function Widgets({ artistID }) {
   const [similar, setSimilar] = useState([]);

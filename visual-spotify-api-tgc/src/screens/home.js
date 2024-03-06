@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "../../components/sidebar";
-import { setClientToken } from "../../spotify";
-import Login from "../auth/login";
-import Favorites from "../favorites";
-import Feed from "../feed";
-import Library from "../library";
-import Player from "../player";
-import Trending from "../trending";
-import "./home.css";
-import Playlist from "../../components/Playlist";
+import Sidebar from "../components/sidebar";
+import { setClientToken } from "../components/spotify";
+import Login from "./auth/login";
+import Favorites from "./favorites/favorites";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Feed from "./feed/feed";
+import Library from "./library";
+import Player from "./player";
+import Trending from "./trending";
+import Playlist from "../components/Playlist";
 
 export default function Home() {
   const [token, setToken] = useState("");
